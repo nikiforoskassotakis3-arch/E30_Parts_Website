@@ -2,9 +2,6 @@
 <html lang="en">
 
 
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,11 +16,8 @@
 
 
 
-
-
-
-
 <body>
+
 
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -57,11 +51,48 @@
 
 
 
+    <main>
+
+      <section class="container py-5">
+       <h1 class="fw-bold">Contact us</h1>
+        <p class="lead">Questions about E30 parts or your restoration? Send us a message.</p>
+
+         <div class="row g-4">
+          <div class="col-lg-6">
+
+            <form id="contactForm">
+             <label for="name" class="fw-bold">Name:</label>
+             <input type="text" name="name" id="name" class="w-100 p-2 border rounded-2 mb-3"
+                 placeholder="Your name" maxlength="40" required="required" />
+
+             <label for="email" class="fw-bold">Email:</label>
+             <input type="email" name="email" id="email" class="w-100 p-2 border rounded-2 mb-3"
+                 placeholder="you@example.com"  maxlength="40"  required="required" />
+
+             <label for="subject" class="fw-bold">Subject:</label>
+             <input type="text" name="subject" id="subject" class="w-100 p-2 border rounded-2 mb-3"
+                 placeholder="e.g. M20 timing belt question" maxlength="80" required="required" />
+
+             <label for="message" class="fw-bold">Message:</label>
+             <textarea name="message" id="message" rows="5" class="w-100 p-2 border rounded-2 mb-3"
+                    placeholder="Write your message..." maxlength="300" required="required"></textarea>
+
+                <input type="submit" value="Send message" class="btn btn-primary" />
+            </form>
+                  
+                <div class="col-lg-6">
+                <h2 class="fs-4 mb-3">Find us</h2>
+                    <div class="ratio ratio-4x3">
+                     <iframe src="https://maps.google.com/maps?q=Deree+American+College+of+Greece&amp;output=embed"
+                     title="Map of the E30 Parts Hub office"></iframe>
+                     </div>
+                    <p class="mt-3 mb-0"><i class="bi bi-geo-alt-fill text-primary"></i> Agia Paraskevi, Athens, Greece</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
-
-
-    
    
     <footer class="bg-dark text-light mt-5 py-4 ">
         <div class="container">
@@ -89,7 +120,7 @@
             </div>
           </div>
 
-          <p class="text-center border-top pt-3 mb-0">Copyright 2026 E30 Parts Hub. All rights reserved.</p>
+           <p class="text-center border-top pt-3 mb-0">Copyright 2026 E30 Parts Hub. All rights reserved.</p>
         </div>
     </footer>
  
