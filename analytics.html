@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 
@@ -48,6 +49,8 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                 <button type="button" class="btn btn-outline-light btn-sm ms-3" onclick="toggleDarkMode()">
+                        <i class="bi bi-moon-fill"></i> Dark mode</button>
             </div></div>
         </nav>
     </header>
@@ -55,7 +58,88 @@
 
 
 
+    <main>
+      <section class="container py-5">
+        <h1 class="fw-bold">Job analytics</h1>
+        <p class="lead">See how your E30 jobs are progressing and move them across the board.</p>
 
+        <!-- the progress bars be filled by JavaScript -->
+        <div class="row g-4 mt-2">
+
+          <div class="col-md-6">
+            <div class="border rounded-2 p-4 h-100">
+              <h2 class="fs-4 mb-3">Completed vs pending</h2>
+
+              <p class="fw-bold mb-1">Completed: <span id="completedNumber">0</span></p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-success" id="completedBar" style="width: 0%">0%</div>
+              </div>
+
+              <p class="fw-bold mb-1">Pending: <span id="pendingNumber">0</span></p>
+              <div class="progress">
+                <div class="progress-bar bg-secondary" id="pendingBar" style="width: 0%">0%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="border rounded-2 p-4 h-100">
+              <h2 class="fs-4 mb-3">Jobs by priority</h2>
+
+              <p class="fw-bold mb-1">High: <span id="highNumber">0</span></p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-danger" id="highBar" style="width: 0%">0%</div>
+              </div>
+
+              <p class="fw-bold mb-1">Medium: <span id="mediumNumber">0</span></p>
+              <div class="progress mb-3">
+                <div class="progress-bar bg-warning" id="mediumBar" style="width: 0%">0%</div>
+              </div>
+
+              <p class="fw-bold mb-1">Low: <span id="lowNumber">0</span></p>
+              <div class="progress">
+                <div class="progress-bar bg-success" id="lowBar" style="width: 0%">0%</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+                <!-- goal board, the job cards will be added by JavaScript -->
+        <h2 class="fs-4 mt-5 mb-3">Job board</h2>
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <div class="border rounded-2 p-4 h-100">
+              <h3 class="fs-5 mb-3"><i class="bi bi-circle text-secondary"></i> To do</h3>
+              <div id="todoColumn">
+                <p class="text-secondary mb-0">No jobs here yet.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="border rounded-2 p-4 h-100">
+              <h3 class="fs-5 mb-3"><i class="bi bi-arrow-repeat text-warning"></i> In progress</h3>
+              <div id="progressColumn">
+                <p class="text-secondary mb-0">No jobs here yet.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="border rounded-2 p-4 h-100">
+              <h3 class="fs-5 mb-3"><i class="bi bi-check-circle-fill text-success"></i> Completed</h3>
+              <div id="completedColumn">
+                <p class="text-secondary mb-0">No jobs here yet.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </main>
 
 
 

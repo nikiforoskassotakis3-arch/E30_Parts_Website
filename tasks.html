@@ -3,8 +3,6 @@
 
 
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
-
-
-
 
 
 
@@ -53,12 +49,152 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                 <button type="button" class="btn btn-outline-light btn-sm ms-3" onclick="toggleDarkMode()">
+                        <i class="bi bi-moon-fill"></i> Dark mode</button>
             </div></div>
         </nav>
     </header>
 
 
+    <main>
+  <section class="container py-5">
+    <h1 class="fw-bold">My E30 Jobs</h1>
+    <p class="lead">Add, track and complete the restoration and maintenance jobs on your E30.</p>
+
+   
+    <div class="border rounded-2 p-4 mt-4">
+      <h2 class="fs-4 mb-3">Add a new job</h2>
+
+      <form id="taskForm">
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <label for="taskName" class="fw-bold">Job name:</label>
+            <input type="text" name="taskName" id="taskName" class="w-100 p-2 border rounded-2"
+                   placeholder="e.g. Replace timing belt" maxlength="50" required="required" />
+          </div>
+
+          <div class="col-md-3">
+            <label for="taskDueDate" class="fw-bold">Due date:</label>
+            <input type="date" name="taskDueDate" id="taskDueDate" class="w-100 p-2 border rounded-2"
+                   required="required" />
+          </div>
+
+          <div class="col-md-3">
+            <label for="taskPriority" class="fw-bold">Priority:</label>
+            <select name="taskPriority" id="taskPriority" class="w-100 p-2 border rounded-2">
+              <option value="High">High</option>
+              <option value="Medium" selected="selected">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="taskDescription" class="fw-bold">Description:</label>
+            <textarea name="taskDescription" id="taskDescription" rows="3" class="w-100 p-2 border rounded-2"
+                      placeholder="e.g. Timing belt, tensioner and water pump" maxlength="200"></textarea>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Add job</button>
+          </div>
+
+        </div>
+      </form>
+
+
+        
+    <h2 class="fs-4 mt-5 mb-3">My jobs</h2>
+    <div class="row g-3 mb-3">
+
+      <div class="col-md-6 col-lg-3">
+        <label for="searchInput" class="fw-bold">Search:</label>
+        <input type="search" name="searchInput" id="searchInput" class="w-100 p-2 border rounded-2"
+               placeholder="Search name or description" />
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <label for="statusFilter" class="fw-bold">Status:</label>
+        <select name="statusFilter" id="statusFilter" class="w-100 p-2 border rounded-2">
+          <option value="All" selected="selected">All</option>
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <label for="priorityFilter" class="fw-bold">Priority:</label>
+        <select name="priorityFilter" id="priorityFilter" class="w-100 p-2 border rounded-2">
+          <option value="All" selected="selected">All</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <label for="sortBy" class="fw-bold">Sort by:</label>
+        <select name="sortBy" id="sortBy" class="w-100 p-2 border rounded-2">
+          <option value="dueDate" selected="selected">Due date</option>
+          <option value="name">Job name</option>
+        </select>
+      </div>
+
+    </div>
+    </div>
+
     
+    <div class="row g-4 text-center">
+
+      <div class="col-md-4">
+        <div class="border rounded-2 p-4 h-100">
+          <i class="bi bi-list-task fs-1 text-primary"></i>
+          <p class="display-6 fw-bold mb-0" id="totalCount">0</p>
+          <p class="text-secondary mb-0">Total jobs</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="border rounded-2 p-4 h-100">
+          <i class="bi bi-hourglass-split fs-1 text-warning"></i>
+          <p class="display-6 fw-bold mb-0" id="pendingCount">0</p>
+          <p class="text-secondary mb-0">Pending jobs</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="border rounded-2 p-4 h-100">
+          <i class="bi bi-check-circle-fill fs-1 text-success"></i>
+          <p class="display-6 fw-bold mb-0" id="completedCount">0</p>
+          <p class="text-secondary mb-0">Completed jobs</p>
+        </div>
+      </div>
+
+    </div>
+
+       
+    <div class="overflow-auto">
+      <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Job</th>
+            <th scope="col">Description</th>
+            <th scope="col">Due date</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="taskTableBody">
+          <tr>
+            <td colspan="6" class="text-center text-secondary">No jobs yet. Add your first job above.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+</main>
 
 
 

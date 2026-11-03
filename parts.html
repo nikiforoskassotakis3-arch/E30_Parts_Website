@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 
@@ -49,6 +50,8 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                 <button type="button" class="btn btn-outline-light btn-sm ms-3" onclick="toggleDarkMode()">
+                        <i class="bi bi-moon-fill"></i> Dark mode</button>
             </div></div>
         </nav>
     </header>
@@ -64,7 +67,7 @@
     <h1 class="fw-bold">E30 Parts Guide</h1>
     <p class="lead">The most common parts that need replacing on a BMW E30, and roughly when.</p>
 
-    <!-- Component 1: parts table -->
+
     <h2 class="fs-4 mt-4 mb-3">Common parts</h2>
     <div class="overflow-auto">
       <table class="table table-bordered">
@@ -80,8 +83,8 @@
           <tr>
             <th scope="row">Timing belt kit</th>
             <td>M20 engines (320i, 325i)</td>
-            <td>approx. 50,000 km or 4 years</td>
-            <td>€90</td>
+            <td>approx. 150,000 km or 34 years</td>
+            <td>€2000</td>
           </tr>
           <tr>
             <th scope="row">Water pump</th>
@@ -93,24 +96,25 @@
             <th scope="row">Oil filter</th>
             <td>All E30 models</td>
             <td>Every oil change (approx. 10,000 km)</td>
-            <td>€10</td>
+            <td>€100</td>
           </tr>
           <tr>
             <th scope="row">Front brake pads</th>
             <td>All E30 models</td>
             <td>When worn down to 3 mm</td>
-            <td>€35</td>
+            <td>€90</td>
           </tr>
           <tr>
             <th scope="row">Spark plugs (set of 6)</th>
             <td>6-cylinder models</td>
             <td>approx. 30,000 km</td>
-            <td>€40</td>
+            <td>€80</td>
           </tr>
         </tbody>
       </table>
     </div>
       
+
 
     <h2 class="fs-4 mt-5 mb-3">Parts gallery</h2>
     <div class="row g-4 text-center">
@@ -140,6 +144,16 @@
       </div>
 
     </div>
+
+    
+    <h2 class="fs-4 mt-5 mb-3">Maintenance tips</h2>
+    <ul class="list-group">
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Change the timing belt on time. The M20 is an interference engine, so a snapped belt can damage the valves.</li>
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Replace the water pump together with the timing belt to save labour.</li>
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Check the oil level every few weeks, especially on older engines.</li>
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Inspect the brake pads and discs at every service.</li>
+      <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Look for rust under the battery tray, sills and wheel arches, the common E30 rust spots.</li>
+    </ul>
   </section>
 </main>
 
