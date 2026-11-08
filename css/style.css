@@ -1,0 +1,20 @@
+
+/* blue line on top of the footer (Bootstrap's primary blue) */
+footer {
+  border-top: 4px solid #0d6efd;
+}
+
+/* home page "What we offer" boxes get a light blue background on hover */
+.info-box:hover {
+  background-color: lightblue;
+}
+
+/*  weather text on  home page in blue */
+#weatherText {
+  color: #0d6efd;
+}
+
+/* bold captions under the parts gallery photos */
+.figure-caption {
+  font-weight: bold;
+}
