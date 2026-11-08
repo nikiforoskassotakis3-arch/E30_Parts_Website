@@ -2,8 +2,8 @@
 <html lang="en">
 
 
-
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="E30 Parts Hub - progress overview and goal board of your E30 jobs">
@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/analytics.js" defer></script>
 </head>
-
 
 
 
@@ -26,21 +27,19 @@
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
 
             <div class="container">
-
                 <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-car-front-fill text-primary"></i> E30 Parts Hub</a>
+                <img src="images/logo.png" alt="E30 Parts Hub logo" width="40" height="40" class="rounded-circle me-2"> E30 Parts Hub</a>
                 <span class="navbar-text">Analytics</span>
-
-                
+ 
+                <!-- Hamburger button for small screens -->
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#mainNav">
                         <span class="navbar-toggler-icon"></span>
                 </button>
-
+                
                 <div class="collapse navbar-collapse" id="mainNav">
-
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="tasks.html">Tasks</a></li>
@@ -49,12 +48,12 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                 <!-- Dark mode button: calls toggleDarkMode() in js/main.js -->
                  <button type="button" class="btn btn-outline-light btn-sm ms-3" onclick="toggleDarkMode()">
                         <i class="bi bi-moon-fill"></i> Dark mode</button>
             </div></div>
         </nav>
     </header>
-
 
 
 
@@ -112,6 +111,7 @@
           <div class="col-md-4">
             <div class="border rounded-2 p-4 h-100">
               <h3 class="fs-5 mb-3"><i class="bi bi-circle text-secondary"></i> To do</h3>
+              <!-- To do column: js/analytics adds a card for each job with status "To do" -->
               <div id="todoColumn">
                 <p class="text-secondary mb-0">No jobs here yet.</p>
               </div>
@@ -121,6 +121,7 @@
           <div class="col-md-4">
             <div class="border rounded-2 p-4 h-100">
               <h3 class="fs-5 mb-3"><i class="bi bi-arrow-repeat text-warning"></i> In progress</h3>
+              <!-- In progress column -->
               <div id="progressColumn">
                 <p class="text-secondary mb-0">No jobs here yet.</p>
               </div>
@@ -130,6 +131,7 @@
           <div class="col-md-4">
             <div class="border rounded-2 p-4 h-100">
               <h3 class="fs-5 mb-3"><i class="bi bi-check-circle-fill text-success"></i> Completed</h3>
+              <!-- Completed column -->
               <div id="completedColumn">
                 <p class="text-secondary mb-0">No jobs here yet.</p>
               </div>
@@ -143,15 +145,13 @@
 
 
 
-    
-   
     <footer class="bg-dark text-light mt-5 py-4 ">
         <div class="container">
           <div class="row text-center text-md-start">
 
             <div class="col-md-4 mb-3">
                 <p class="fs-5 fw-bold mb-1">
-                    <i class="bi bi-car-front-fill text-primary"></i> E30 Parts Hub</p>
+                    <img src="images/logo.png" alt="E30 Parts Hub logo" width="50" height="50" class="rounded-circle me-2"> E30 Parts Hub</p>
                 <p class="mb-0">Parts and restoration jobs for the BMW E30.</p>
             </div>
 

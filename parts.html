@@ -2,8 +2,8 @@
 <html lang="en">
 
 
-
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="E30 Parts Hub - common BMW E30 parts and maintenance information">
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
-
 
 
 
@@ -27,12 +27,11 @@
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
 
             <div class="container">
-
                 <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-car-front-fill text-primary"></i> E30 Parts Hub</a>
+                <img src="images/logo.png" alt="E30 Parts Hub logo" width="40" height="40" class="rounded-circle me-2"> E30 Parts Hub</a>
                 <span class="navbar-text">Parts</span>
 
-                
+              
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
@@ -41,7 +40,6 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="mainNav">
-
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="tasks.html">Tasks</a></li>
@@ -59,8 +57,6 @@
 
 
 
-
-
 <main>
 
   <section class="container py-5">
@@ -68,7 +64,9 @@
     <p class="lead">The most common parts that need replacing on a BMW E30, and roughly when.</p>
 
 
+    <!-- parts table -->
     <h2 class="fs-4 mt-4 mb-3">Common parts</h2>
+    <!-- overflow-auto: the table scrolls sideways on small screens -->
     <div class="overflow-auto">
       <table class="table table-bordered">
         <thead class="table-dark">
@@ -83,8 +81,8 @@
           <tr>
             <th scope="row">Timing belt kit</th>
             <td>M20 engines (320i, 325i)</td>
-            <td>approx. 150,000 km or 34 years</td>
-            <td>€2000</td>
+            <td>approx. 60,000 km or 4 years</td>
+            <td>€90</td>
           </tr>
           <tr>
             <th scope="row">Water pump</th>
@@ -96,19 +94,19 @@
             <th scope="row">Oil filter</th>
             <td>All E30 models</td>
             <td>Every oil change (approx. 10,000 km)</td>
-            <td>€100</td>
+            <td>€30</td>
           </tr>
           <tr>
             <th scope="row">Front brake pads</th>
             <td>All E30 models</td>
             <td>When worn down to 3 mm</td>
-            <td>€90</td>
+            <td>€70</td>
           </tr>
           <tr>
             <th scope="row">Spark plugs (set of 6)</th>
             <td>6-cylinder models</td>
             <td>approx. 30,000 km</td>
-            <td>€80</td>
+            <td>€60</td>
           </tr>
         </tbody>
       </table>
@@ -116,12 +114,13 @@
       
 
 
+    <!-- parts gallery  -->
     <h2 class="fs-4 mt-5 mb-3">Parts gallery</h2>
     <div class="row g-4 text-center">
 
       <div class="col-md-4">
         <figure class="figure">
-          <img src=xxxxxxxxxxxxxxx class="figure-img img-fluid img-thumbnail"
+          <img src="images/timing-belt.jpg" class="figure-img img-fluid img-thumbnail"
                alt="Timing belt kit for the BMW E30 M20 engine" />
           <figcaption class="figure-caption">Timing belt kit (M20)</figcaption>
         </figure>
@@ -129,7 +128,7 @@
 
       <div class="col-md-4">
         <figure class="figure">
-          <img src=xxxxxxxxxxxxxx class="figure-img img-fluid img-thumbnail"
+          <img src="images/brake-pads.jpg" class="figure-img img-fluid img-thumbnail"
                alt="Set of front brake pads for the BMW E30" />
           <figcaption class="figure-caption">Front brake pads</figcaption>
         </figure>
@@ -137,7 +136,7 @@
 
       <div class="col-md-4">
         <figure class="figure">
-          <img src=xxxxxxxxxxxxxxxxx class="figure-img img-fluid img-thumbnail"
+          <img src="images/water-pump.jpg" class="figure-img img-fluid img-thumbnail"
                alt="Water pump for the BMW E30 M20 engine" />
           <figcaption class="figure-caption">Water pump (M20)</figcaption>
         </figure>
@@ -146,6 +145,7 @@
     </div>
 
     
+    <!--  maintenance tips  -->
     <h2 class="fs-4 mt-5 mb-3">Maintenance tips</h2>
     <ul class="list-group">
       <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Change the timing belt on time. The M20 is an interference engine, so a snapped belt can damage the valves.</li>
@@ -165,7 +165,7 @@
 
             <div class="col-md-4 mb-3">
                 <p class="fs-5 fw-bold mb-1">
-                    <i class="bi bi-car-front-fill text-primary"></i> E30 Parts Hub</p>
+                    <img src="images/logo.png" alt="E30 Parts Hub logo" width="50" height="50" class="rounded-circle me-2"> E30 Parts Hub</p>
                 <p class="mb-0">Parts and restoration jobs for the BMW E30.</p>
             </div>
 

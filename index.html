@@ -2,8 +2,8 @@
 <html lang="en">
 
 
-
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="E30 Parts Hub - parts and restoration tasks for the BMW E30">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
 </head>
 
 
@@ -26,12 +28,12 @@
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
 
             <div class="container">
-
                 <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-car-front-fill text-primary"></i> E30 Parts Hub</a>
+                <img src="images/logo.png" alt="E30 Parts Hub logo" width="40" height="40" class="rounded-circle me-2"> E30 Parts Hub</a>
                 <span class="navbar-text">Home</span>
 
                 
+                <!-- Hamburger button for small screens-->
                 <button class="navbar-toggler" 
                         type="button" 
                         data-bs-toggle="collapse" 
@@ -49,6 +51,7 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                 <!-- Dark mode button calls toggleDarkMode() in the js script -->
                  <button type="button" class="btn btn-outline-light btn-sm ms-3" onclick="toggleDarkMode()">
                         <i class="bi bi-moon-fill"></i> Dark mode</button>
             </div></div>
@@ -59,12 +62,8 @@
 
 
 
-
-
-
     <main>
         
-
           <div class="container py-5 text-center">
             <h1 class="display-4 fw-bold">Welcome to E30 Parts Hub</h1>
             <p class="lead">We are a small team of BMW E30 enthusiasts. We supply parts for the E30 and help owners plan and track their restoration and maintenance jobs.</p>
@@ -79,7 +78,7 @@
 
 
           <div class="col-md-4">
-            <div class="border rounded-2 p-4 h-100">
+            <div class="border rounded-2 p-4 h-100 info-box">
                 <i class="bi bi-gear-fill fs-1 text-primary"></i>
                 <h3 class="fs-4 mt-2">Parts guide</h3>
                 <p class="mb-0">Information on the most common E30 parts and when they need replacing.</p>
@@ -87,7 +86,7 @@
          </div>
 
          <div class="col-md-4">
-            <div class="border rounded-2 p-4 h-100">
+            <div class="border rounded-2 p-4 h-100 info-box">
                 <i class="bi bi-list-check fs-1 text-primary"></i>
                 <h3 class="fs-4 mt-2">Job tracker</h3>
                 <p class="mb-0">Add, edit and complete your restoration jobs with due dates and priorities.</p>
@@ -95,7 +94,7 @@
          </div>
 
          <div class="col-md-4">
-             <div class="border rounded-2 p-4 h-100">
+             <div class="border rounded-2 p-4 h-100 info-box">
                 <i class="bi bi-bar-chart-fill fs-1 text-primary"></i>
                    <h3 class="fs-4 mt-2">Progress board</h3>
                 <p class="mb-0">See your progress and move jobs across a goal board.</p>
@@ -105,7 +104,7 @@
       </div>
 
 
-            <!-- the latest activity  items will be added by JavaScript -->
+            <!-- the latest activity  items will be added by Js -->
       <div class="container mt-5">
         <h2 class="text-center mb-4">Latest activity</h2>
         <ul class="list-group" id="activityList">
@@ -114,11 +113,12 @@
       </div>
 
 
-            <!-- the api section will be  added by JavaScript  -->
+            <!-- the weather info section will be  added by Js  -->
       <div class="container mt-5">
         <h2 class="text-center mb-4">Garage weather</h2>
         <div class="border rounded-2 p-4 text-center">
           <i class="bi bi-cloud-sun-fill fs-1 text-primary"></i>
+          
           <p class="fs-5 fw-bold mt-2 mb-1" id="weatherText">Loading weather...</p>
           <p class="text-secondary mb-0">Today's weather in Athens, from the Open-Meteo API.</p>
         </div>
@@ -129,16 +129,13 @@
 
 
 
-
-
-
    <footer class="bg-dark text-light mt-5 py-4 ">
         <div class="container">
           <div class="row text-center text-md-start">
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3">  
                 <p class="fs-5 fw-bold mb-1">
-                    <i class="bi bi-car-front-fill text-primary"></i> E30 Parts Hub</p>
+                    <img src="images/logo.png" alt="E30 Parts Hub logo" width="50" height="50" class="rounded-circle me-2"> E30 Parts Hub</p>
                 <p class="mb-0">Parts and restoration jobs for the BMW E30.</p>
             </div>
 
@@ -150,6 +147,7 @@
             </div>
 
             <div class="col-md-4 mb-3">
+               
                 <p class="fw-bold mb-1">Follow us</p>
                 <a class="link-light fs-4 me-3" href="https://www.facebook.com" ><i class="bi bi-facebook"></i></a>
                 <a class="link-light fs-4 me-3" href="https://www.instagram.com" ><i class="bi bi-instagram"></i></a>
@@ -158,6 +156,7 @@
             </div>
           </div>
 
+           
            <p class="text-center border-top pt-3 mb-0">Copyright 2026 E30 Parts Hub. All rights reserved.</p>
         </div>
     </footer>
