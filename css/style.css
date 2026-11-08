@@ -1,10 +1,10 @@
 
-/* blue line on top of the footer (Bootstrap's primary blue) */
+/* blue line on top of the footer */
 footer {
   border-top: 4px solid #0d6efd;
 }
 
-/* home page "What we offer" boxes get a light blue background on hover */
+/* home page "What we offer" boxes gets a light blue background on hover */
 .info-box:hover {
   background-color: lightblue;
 }
