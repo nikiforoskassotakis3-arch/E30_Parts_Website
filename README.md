@@ -143,7 +143,7 @@ SEO (100): every page has its own title and meta description, the viewport tag a
 
 ![Home – SEO](lighthouse/home-4-seo.png)
 
-Accessibility (93–95-100): the only failed check was "Links do not have a discernible name". It comes from the 4 social media icons in the footer, which have no text, so a screen reader cannot say where they lead. I fixed it afterwards by adding the necessary hidden text inside each link with Bootstrap's visually-hidden class, which I had already used on the carousel arrows.After the fix, accessibility went up to a 100.
+Accessibility (93–95 before fix-100 after fix): the only failed check was "Links do not have a discernible name". It comes from the 4 social media icons in the footer, which have no text, so a screen reader cannot say where they lead. I fixed it afterwards by adding the necessary hidden text inside each link with Bootstrap's visually-hidden class, which I had already used on the carousel arrows.After the fix, accessibility went up to a 100.
 
 ![About page – Accessibility after the fix](lighthouse/about-2-accessibility.png)
 
@@ -185,7 +185,7 @@ Some other challenges i faced:
 
 10. The contact form accepted email addresses that were not real, like "abc". I used indexOf() to check that the email contains "@" and ".", and showed an error if not. 
 
-11. Lighthouse would not audit the pages when I opened them straight from the folder. I ran the site with the VS Code Live Server extension, so the pages had an http address. |
+11. Lighthouse would not audit the pages when I opened them straight from the folder. I ran the site with the VS Code Live Server extension, so the pages had an http address. 
 
 
 The most prevelant things i learnt through the creation of this website are how JavaScript changes a page through the DOM, how to keep data in the browser, and how  Bootstrap saves a lot of CSS. If I did the project again, I would plan the shared functions at the start instead of moving them into main.js later.
